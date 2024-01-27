@@ -8,7 +8,7 @@ const router = createBrowserRouter([
         element: <Main />,
         children: [
             {
-                index: true,
+                path: "/",
                 element: <Home />
             }
         ]
