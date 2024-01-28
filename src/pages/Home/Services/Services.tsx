@@ -10,14 +10,14 @@ import { TService } from "./service.types";
 const Services = () => {
     const { allServices, isLoading } = useGetServices();
 
-    console.log(allServices);
+    // console.log(allServices);
     if (isLoading) {
         return <Loading />
     }
 
 
     return (
-        <section className="my-20">
+        <section className="my-20 px-3 md:px-4 lg:px-7">
             <SectionHead title="Our Services" description="Dive into the world of unforgettable moments with Event 360's services. From Corporate and Organization Events to Weddings and Concerts, our expertly crafted packages ensure seamless experiences. Elevate your events effortlessly with tailored features and pricing. Your extraordinary moments start here." />
 
 

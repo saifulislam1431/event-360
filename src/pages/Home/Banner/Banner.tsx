@@ -21,6 +21,7 @@ const Banner = () => {
             variants={BannerAnimate}
             initial="hidden"
             animate="visible"
+            className="px-3 md:px-4 lg:px-7"
         >
             <img src={banner} alt="Banner" className="mx-auto" />
         </motion.section>

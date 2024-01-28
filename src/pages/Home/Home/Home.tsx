@@ -1,6 +1,7 @@
 import Banner from "../Banner/Banner";
+import Events from "../Events/Events";
 import Header from "../Header/Header";
-import Services from "../Services/services";
+import Services from "../Services/Services";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Header />
             <Banner />
             <Services />
+            <Events />
         </section>
     );
 };

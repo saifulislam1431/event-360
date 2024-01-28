@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import "./styles/Nav.css"
 import './styles/Header.css'
+import './styles/event.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './routes/router'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'

@@ -33,7 +33,7 @@ const Header = () => {
     }
 
     return (
-        <motion.section className="text-center my-4 space-y-2"
+        <motion.section className="text-center my-4 space-y-2 px-3 md:px-4 lg:px-7"
             variants={headerContainerAnimate}
             initial="hidden"
             animate="visible"

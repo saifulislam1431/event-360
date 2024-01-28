@@ -1,0 +1,13 @@
+.event-bg {
+    background-color: transparent;
+    background-image:
+        radial-gradient(at 90% 60%, hsla(331, 91%, 54%, 0.431) 0px, transparent 50%),
+        radial-gradient(at 10% 40%, hsla(133, 56%, 60%, 0.46) 0px, transparent 50%);
+}
+
+.card-bg {
+    background: rgba(244, 31, 134, 0.43137254901960786);
+    backdrop-filter: blur(12.8px);
+    -webkit-backdrop-filter: blur(12.8px);
+    border: 1px solid rgba(244, 31, 134, 0.3);
+}
