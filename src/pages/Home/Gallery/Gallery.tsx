@@ -14,9 +14,9 @@ import picture10 from "../../../assets/gallery/Picture10.png";
 
 const Gallery = () => {
     return (
-        <section className="my-20 px-3 md:px-4 lg:px-7 flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-5">
+        <section className="my-24 px-3 md:px-4 lg:px-7 flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-5">
 
-            <div className="w-full lg:w-1/2 space-y-5">
+            <div className="w-full lg:w-2/3 space-y-5">
                 <h1 className="text-4xl md:text-5xl font-semibold">Gallery</h1>
                 <p className="text-[#566B84]">Immerse yourself in a visual journey through our curated gallery. From mesmerizing sunsets to dynamic performances, explore a collection of captivating moments captured in time.</p>
 
@@ -40,18 +40,18 @@ const Gallery = () => {
                         <img src={picture2} alt="picture2" />
                     </div>
 
-                    <div className="col-span-3">
+                    <div className="col-span-3 flex flex-col items-end">
                         <img src={picture3} alt="picture3" />
                         <img src={picture4} alt="picture4" />
                         <img src={picture5} alt="picture5" />
                     </div>
 
-                    <div className="col-span-3">
+                    <div className="col-span-3 flex flex-col items-end">
                         <img src={picture6} alt="picture6" />
                         <img src={picture7} alt="picture7" />
                         <img src={picture8} alt="picture8" />
                     </div>
-                    <div className="col-span-3">
+                    <div className="col-span-3 flex flex-col items-end">
                         <img src={picture9} alt="picture9" />
                         <img src={picture10} alt="picture10" />
                     </div>
