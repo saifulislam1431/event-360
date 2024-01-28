@@ -11,3 +11,7 @@ body {
 .btn-primary {
     @apply inline-flex items-center gap-1 text-primary px-2 py-1 border border-primary rounded text-sm font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer
 }
+
+.btn-second {
+    @apply w-full inline-flex items-center justify-center gap-1 hover:text-primary px-4 py-2 border border-primary rounded text-sm font-medium bg-primary hover:bg-transparent text-white transition-all duration-300 cursor-pointer
+}

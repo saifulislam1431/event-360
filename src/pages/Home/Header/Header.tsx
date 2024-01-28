@@ -43,7 +43,7 @@ const Header = () => {
             </motion.h1>
             <motion.p className="text-3xl md:text-4xl font-extrabold text-warning" variants={headerContentAnimate}>For <span className="text-style">Winter</span></motion.p>
 
-            <motion.p className="max-w-[95ch] mx-auto" variants={headerContentAnimate}>Explore the magic of winter with our 'Brand New Event Packages for Winter' at Event 360. Unforgettable experiences await, from festive celebrations to cozy gatherings. Make your winter events extraordinary!</motion.p>
+            <motion.p className="max-w-[95ch] mx-auto text-[#566B84]" variants={headerContentAnimate}>Explore the magic of winter with our 'Brand New Event Packages for Winter' at Event 360. Unforgettable experiences await, from festive celebrations to cozy gatherings. Make your winter events extraordinary!</motion.p>
         </motion.section>
     );
 };
