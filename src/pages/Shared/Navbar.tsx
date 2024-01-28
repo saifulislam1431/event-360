@@ -100,9 +100,9 @@ const Navbar = () => {
 
 
                     <ul className={cn(
-                        "absolute -top-96 left-0 space-y-5 flex flex-col items-center bg-success bg-opacity-40 w-full py-6 transition-all duration-500",
+                        "absolute -top-96 left-0 space-y-5 flex flex-col items-center bg-base-100  bg-opacity-100 w-full py-6 transition-all duration-500",
                         {
-                            "absolute top-20 left-0 space-y-5 flex flex-col items-center bg-success bg-opacity-40 w-full py-6 transition-all duration-500": isOpen
+                            "top-20": isOpen
                         }
                     )}>
                         {navLinks}

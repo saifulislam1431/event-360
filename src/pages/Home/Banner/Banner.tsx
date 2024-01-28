@@ -1,8 +1,29 @@
+import banner from "../../../assets/banner/banner1.png"
+import { motion } from "framer-motion"
+
 const Banner = () => {
+    const BannerAnimate = {
+        hidden: {
+            opacity: 0,
+            x: -500
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                delay: 1.5,
+                duration: 0.5,
+            }
+        }
+    }
     return (
-        <div>
-            Banner
-        </div>
+        <motion.section
+            variants={BannerAnimate}
+            initial="hidden"
+            animate="visible"
+        >
+            <img src={banner} alt="Banner" className="mx-auto" />
+        </motion.section>
     );
 };
 
