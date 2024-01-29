@@ -3,6 +3,7 @@ import Events from "../Events/Events";
 import Gallery from "../Gallery/Gallery";
 import Header from "../Header/Header";
 import Pricing from "../Pricing/Pricing";
+import RecentEvents from "../RecentEvents/RecentEvents";
 import Services from "../Services/Services";
 import Testimonials from "../Testimonials/Testimonials";
 
@@ -16,6 +17,7 @@ const Home = () => {
             <Gallery />
             <Pricing />
             <Testimonials />
+            <RecentEvents />
         </section>
     );
 };

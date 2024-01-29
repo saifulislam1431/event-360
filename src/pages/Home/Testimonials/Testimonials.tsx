@@ -43,10 +43,10 @@ const Testimonials = () => {
                         className="mySwiper"
                     >
                         {
-                            allTestimonial.map((review: TTestimonial) => <SwiperSlide key={review._id} className='bg-[#8190A6] rounded bg-opacity-30 relative text-base-100'>
+                            allTestimonial?.map((review: TTestimonial) => <SwiperSlide key={review?._id} className='bg-[#8190A6] rounded bg-opacity-30 relative text-base-100'>
                                 <div className='w-full h-full p-5 relative'>
                                     <div>
-                                        <p className=''>{review.comment}</p>
+                                        <p className=''>{review?.comment}</p>
                                     </div>
                                     <div className='flex mt-8 items-center gap-2 absolute bottom-7'>
                                         <div className="avatar">
@@ -69,7 +69,7 @@ const Testimonials = () => {
 
                 <div className="lg:hidden flex flex-col gap-6">
                     {
-                        allTestimonial.map((review: TTestimonial) => <Testimonial key={review?._id} review={review} />)
+                        allTestimonial?.map((review: TTestimonial) => <Testimonial key={review?._id} review={review} />)
                     }
                 </div>
             </div>

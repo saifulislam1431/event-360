@@ -2,10 +2,10 @@ import { TTestimonial } from "./testimonial.type";
 
 const Testimonial = ({ review }: { review: TTestimonial }) => {
     return (
-        <div key={review._id} className='bg-[#8190A6] rounded bg-opacity-30 relative text-base-100'>
+        <div key={review?._id} className='bg-[#8190A6] rounded bg-opacity-30 relative text-base-100'>
             <div className='w-full h-[280px] p-5 relative'>
                 <div>
-                    <p className=''>{review.comment}</p>
+                    <p className=''>{review?.comment}</p>
                 </div>
                 <div className='flex mt-8 items-center gap-2 absolute bottom-7'>
                     <div className="avatar">
