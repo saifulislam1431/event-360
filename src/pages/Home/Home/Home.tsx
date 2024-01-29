@@ -4,6 +4,7 @@ import Gallery from "../Gallery/Gallery";
 import Header from "../Header/Header";
 import Pricing from "../Pricing/Pricing";
 import Services from "../Services/Services";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Events />
             <Gallery />
             <Pricing />
+            <Testimonials />
         </section>
     );
 };

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Pricing = () => {
 
     return (
-        <section className="mt-24 mb-24 lg:mb-72">
+        <section className="mt-24 mb-24 lg:mb-96">
             <div className="h-full lg:h-[450px] bg-gradient-to-r from-accent to-base-100 w-full p-3 md:p-4 lg:p-7 relative">
                 <div className="text-center">
                     <h1 className="text-3xl font-semibold">Ready to get started?</h1>
