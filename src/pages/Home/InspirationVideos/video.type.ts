@@ -12,5 +12,5 @@ export type TVideoProps = {
         duration?: string; // If you have a duration property in your playlist items
       }[];
     };
-    onReady?: (player: videojs.Player) => void;
+    onReady?: (player: typeof videojs.players) => void;
   }

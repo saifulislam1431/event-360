@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 const Video = (props: TVideoProps) => {
     const videoRef = useRef<HTMLDivElement>(null);
-    const playerRef = useRef<videojs.Player | null>(null);
+    const playerRef = useRef<typeof videojs.players | null>(null);
     const { options, onReady } = props;
     const [isHovered, setHovered] = useState({ value: false, id: -1 })
 

@@ -4,10 +4,9 @@ import Video from "./Video";
 import videojs from "video.js";
 import 'videojs-playlist';
 
-interface InspirationVideosProps { }
 
-const InspirationVideos: InspirationVideosProps = () => {
-    const playerRef = useRef<videojs.Player | null>(null);
+const InspirationVideos = () => {
+    const playerRef = useRef<typeof videojs.players | null>(null);
     const videoJsOptions = {
         autoplay: false,
         controls: true,
@@ -44,7 +43,7 @@ const InspirationVideos: InspirationVideosProps = () => {
         ],
     };
 
-    const handlePlayerReady = (player) => {
+    const handlePlayerReady = (player: typeof videojs.players) => {
         playerRef.current = player;
 
         // You can handle player events here, for example:

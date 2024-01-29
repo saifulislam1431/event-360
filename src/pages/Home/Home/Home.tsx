@@ -1,5 +1,6 @@
 import Banner from "../Banner/Banner";
 import Events from "../Events/Events";
+import FrequentlyAskedQuestion from "../FAQ/FrequentlyAskedQuestion";
 import Gallery from "../Gallery/Gallery";
 import Header from "../Header/Header";
 import InspirationVideos from "../InspirationVideos/InspirationVideos";
@@ -20,6 +21,7 @@ const Home = () => {
             <Testimonials />
             <RecentEvents />
             <InspirationVideos />
+            <FrequentlyAskedQuestion />
         </section>
     );
 };

@@ -1,0 +1,6 @@
+.custom-bg {
+    background-color: transparent;
+    background-image:
+        radial-gradient(at 90% 60%, #5901cb5d 0px, transparent 50%),
+        radial-gradient(at 10% 40%, #FFFFFF 0px, transparent 50%);
+}
