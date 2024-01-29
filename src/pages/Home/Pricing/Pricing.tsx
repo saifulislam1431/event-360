@@ -25,6 +25,7 @@ const Pricing = () => {
                                 duration: 0.2
                             }
                         }}
+                        data-aos="fade-left" data-aos-duration="2000"
                     >
                         <p className="text-lg font-semibold">Basic Package</p>
                         <p className="font-extrabold text-3xl mt-3">$299<sub><small className="font-medium">/event</small></sub></p>
@@ -57,6 +58,7 @@ const Pricing = () => {
                                 duration: 0.2
                             }
                         }}
+                        data-aos="fade-up" data-aos-duration="2000"
                     >
                         <p className="text-lg font-semibold">Standard Package</p>
                         <p className="font-extrabold text-3xl mt-3">$599<sub><small className="font-medium">/event</small></sub></p>
@@ -89,6 +91,7 @@ const Pricing = () => {
                                 duration: 0.2
                             }
                         }}
+                        data-aos="fade-right" data-aos-duration="2000"
                     >
                         <p className="text-lg font-semibold">Premium Package</p>
                         <p className="font-extrabold text-3xl mt-3">$999<sub><small className="font-medium">/event</small></sub></p>

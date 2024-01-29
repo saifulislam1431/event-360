@@ -4,3 +4,13 @@
         radial-gradient(at 80% 60%, hsla(331, 91%, 54%, 0.431) 0px, transparent 50%),
         radial-gradient(at 10% 40%, #FFFFFF 0px, transparent 50%);
 }
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 5s linear infinite;
+}

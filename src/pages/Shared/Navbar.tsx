@@ -45,7 +45,8 @@ const Navbar = () => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 2,
+                delay: 1,
+                duration: 4,
                 type: "spring"
             }
         }
@@ -57,15 +58,16 @@ const Navbar = () => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 2,
+                delay: 1,
+                duration: 4,
                 type: "spring"
             }
         }
     }
 
     return (
-        <header className="h-16">
-            <nav className="navbar bg-base-100 fixed top-0 left-0 right-0 z-50">
+        <header className="h-16 sticky top-0">
+            <div className="navbar bg-base-100 z-50 sticky top-0">
                 <motion.div className="navbar-start"
                     variants={logoAnimate}
                     initial="hidden"
@@ -109,7 +111,7 @@ const Navbar = () => {
                     </ul>
 
                 </div>
-            </nav>
+            </div>
         </header>
     );
 };

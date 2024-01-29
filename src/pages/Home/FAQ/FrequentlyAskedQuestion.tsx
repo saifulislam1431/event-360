@@ -11,10 +11,10 @@ const FrequentlyAskedQuestion = () => {
 " />
 
             <div className="my-16 flex flex-col lg:flex-row items-center justify-center px-3 md:px-4 lg:px-7">
-                <div className="w-full lg:w-1/2">
+                <div className="w-full lg:w-1/2" data-aos="fade-up-right" data-aos-duration="2000">
                     <Lottie animationData={faqData} loop={true} />
                 </div>
-                <div className="w-full">
+                <div className="w-full" data-aos="fade-up-left" data-aos-duration="2000">
                     <div className='grid grid-cols-1 md:grid-cols-2 items-center justify-center px-3  gap-6 my-10'>
                         <div className='space-y-5'>
                             <div tabIndex={0} className="collapse collapse-arrow shadow-lg bg-secondary bg-opacity-20 rounded-lg">

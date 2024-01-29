@@ -13,6 +13,9 @@ import picture9 from "../../../assets/gallery/Picture9.png";
 import picture10 from "../../../assets/gallery/Picture10.png";
 
 const Gallery = () => {
+
+
+
     return (
         <section className="gallery-bg">
             <div className="my-24 px-3 md:px-4 lg:px-7 flex flex-col lg:flex-row items-center justify-center gap-20 lg:gap-5">
@@ -31,7 +34,8 @@ const Gallery = () => {
                 </div>
 
                 <div className="w-full relative h-full">
-                    <div className="absolute  -top-10 lg:top-0 lg:-left-24">
+                    <div className="absolute  -top-10 lg:top-0 lg:-left-24 w-20 lg:w-36 animate-spin"
+                    >
                         <img src={party} alt="party" className="w-20 lg:w-36" />
                     </div>
 

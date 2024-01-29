@@ -9,9 +9,9 @@ const Header = () => {
         visible: {
             opacity: 1,
             transition: {
-                duration: 0.2,
+                duration: 0.4,
                 staggerChildren: 0.5,
-                delayChildren: 0.5
+                delayChildren: 0.6
             }
         }
     }

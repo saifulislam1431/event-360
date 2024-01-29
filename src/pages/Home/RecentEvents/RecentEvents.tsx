@@ -5,9 +5,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TRecentEvent } from "./recentEvent.type";
 import RecentEvent from "./RecentEvent";
+import useScrollFadeUp from "../../../hooks/useScrollfadeUp";
+import { motion } from "framer-motion"
 
 const RecentEvents = () => {
     const { recentEvents } = useGetRecentEvent();
+    const { componentRef, style } = useScrollFadeUp();
     const settings = {
         arrows: true,
         dots: true,
@@ -48,13 +51,16 @@ const RecentEvents = () => {
         <section className="my-20 px-3 md:px-4 lg:px-7">
             <SectionHead title="Recent Events" description="Dive into recent events! From the vibrant 'Spring Garden Party' to the innovative 'Tech Expo 2024,' and the sun-soaked 'Summer Beach Bash,' to the creative 'Artisan Craft Fair.' Unforgettable experiences await!" />
 
-            <div className="mt-20">
+            <motion.div className="mt-20"
+                style={style}
+                ref={componentRef}
+            >
                 <Slider {...settings}>
                     {
                         recentEvents?.map((recentEvent: TRecentEvent) => <RecentEvent key={recentEvent?._id} event={recentEvent} />)
                     }
                 </Slider>
-            </div>
+            </motion.div>
         </section>
     );
 };
