@@ -1,8 +1,10 @@
+import DashHead from "../../components/DashHead";
+
 const DashboardHome = () => {
     return (
-        <div>
-            DashboardHome
-        </div>
+        <section>
+            <DashHead title="Welcome to Dashboard!" />
+        </section>
     );
 };
 

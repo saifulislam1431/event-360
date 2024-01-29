@@ -3,8 +3,9 @@ import Main from "../Layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import ManageRecentEvents from "../pages/Dashboard/ManageRecetEvents";
-import ManageEventItems from "../pages/Dashboard/ManageEventItems";
+import ManageEventItems from "../pages/Dashboard/ManageEventItems/ManageEventItems";
 import DashboardHome from "../pages/Dashboard/DashboardHome";
+import AddNewRecentItems from "../pages/Dashboard/AddNewRecentItems";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
             {
                 path: "manage-event-items",
                 element: <ManageEventItems />
-            }
+            },
         ]
     }
 ]);

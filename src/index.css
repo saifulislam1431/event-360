@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Teko:wght@400;500;600;700&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+.brand-font {
+    font-family: 'Teko', sans-serif;
 }
 
 @tailwind base;
@@ -14,4 +18,8 @@ body {
 
 .btn-second {
     @apply w-full inline-flex items-center justify-center gap-1 hover:text-primary px-4 py-2 border border-primary rounded text-sm font-medium bg-primary hover:bg-transparent text-white transition-all duration-300 cursor-pointer
+}
+
+.inputField {
+    @apply w-full px-6 py-4 rounded-md bg-accent bg-opacity-50 focus:outline focus:outline-accent
 }
