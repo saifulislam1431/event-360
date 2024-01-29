@@ -10,9 +10,12 @@
     color: #FFFFFF;
     font-size: 14px;
     font-weight: 600;
+
 }
 
 .card-div:hover .card-btn {
     background-color: #FFFFFF;
     color: #5A01CB;
+    transition: all;
+    transition-duration: 500;
 }

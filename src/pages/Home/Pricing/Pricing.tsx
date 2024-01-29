@@ -1,6 +1,8 @@
 import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
+
     return (
         <section className="mt-24 mb-24 lg:mb-72">
             <div className="h-full lg:h-[450px] bg-gradient-to-r from-accent to-base-100 w-full p-3 md:p-4 lg:p-7 relative">
@@ -10,7 +12,20 @@ const Pricing = () => {
                 </div>
 
                 <div className="lg:absolute flex items-center justify-center gap-7 flex-col lg:flex-row my-10 ">
-                    <div className="w-[350px] h-[550px] p-10 bg-base-100 rounded-md shadow hover:bg-primary hover:text-white transition-all duration-500 relative card-div cursor-pointer">
+                    <motion.div className="w-[350px] h-[550px] p-10 bg-base-100 rounded-md shadow hover:bg-primary hover:text-white transition-all duration-500 relative card-div cursor-pointer"
+                        whileHover={{
+                            scale: 1.1,
+                            transition: {
+                                duration: 0.2
+                            }
+                        }}
+                        whileTap={{
+                            scale: 0.5,
+                            transition: {
+                                duration: 0.2
+                            }
+                        }}
+                    >
                         <p className="text-lg font-semibold">Basic Package</p>
                         <p className="font-extrabold text-3xl mt-3">$299<sub><small className="font-medium">/event</small></sub></p>
 
@@ -27,9 +42,22 @@ const Pricing = () => {
                             <button className="card-btn">Get The Package</button>
                         </div>
 
-                    </div>
+                    </motion.div>
 
-                    <div className="w-[350px] h-[550px] p-10 bg-base-100 rounded-md shadow hover:bg-primary hover:text-white transition-all duration-500 relative card-div cursor-pointer">
+                    <motion.div className="w-[350px] h-[550px] p-10 bg-base-100 rounded-md shadow hover:bg-primary hover:text-white transition-all duration-500 relative card-div cursor-pointer"
+                        whileHover={{
+                            scale: 1.1,
+                            transition: {
+                                duration: 0.2
+                            }
+                        }}
+                        whileTap={{
+                            scale: 0.5,
+                            transition: {
+                                duration: 0.2
+                            }
+                        }}
+                    >
                         <p className="text-lg font-semibold">Standard Package</p>
                         <p className="font-extrabold text-3xl mt-3">$599<sub><small className="font-medium">/event</small></sub></p>
 
@@ -46,9 +74,22 @@ const Pricing = () => {
                             <button className="card-btn">Get The Package</button>
                         </div>
 
-                    </div>
+                    </motion.div>
 
-                    <div className="w-[350px] h-[550px] p-10 bg-base-100 rounded-md shadow hover:bg-primary hover:text-white transition-all duration-500 relative card-div cursor-pointer">
+                    <motion.div className="w-[350px] h-[550px] p-10 bg-base-100 rounded-md shadow hover:bg-primary hover:text-white transition-all duration-500 relative card-div cursor-pointer"
+                        whileHover={{
+                            scale: 1.1,
+                            transition: {
+                                duration: 0.2
+                            }
+                        }}
+                        whileTap={{
+                            scale: 0.5,
+                            transition: {
+                                duration: 0.2
+                            }
+                        }}
+                    >
                         <p className="text-lg font-semibold">Premium Package</p>
                         <p className="font-extrabold text-3xl mt-3">$999<sub><small className="font-medium">/event</small></sub></p>
 
@@ -66,7 +107,7 @@ const Pricing = () => {
                             <button className="card-btn">Get The Package</button>
                         </div>
 
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

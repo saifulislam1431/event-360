@@ -12,7 +12,7 @@ const Event = ({ event, isFirstRow }: { event: TEvents, isFirstRow: boolean }) =
             onMouseEnter={() => setHovered({ value: true, id: event?._id })}
             onMouseLeave={() => setHovered({ value: false, id: "0" })}
         >
-            <div className="relative">
+            <div className="relative overflow-hidden">
                 <img src={event?.image} alt="Event Image" className={`rounded ${isFirstRow ? "w-full max-w-[500px] h-60 lg:h-[340px]" : "w-full max-w-[346px] h-60 lg:h-[200px]"}`} />
 
                 <motion.div className="absolute card-bg w-full h-full top-0 rounded p-2"
