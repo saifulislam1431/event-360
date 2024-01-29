@@ -2,6 +2,7 @@ import Banner from "../Banner/Banner";
 import Events from "../Events/Events";
 import Gallery from "../Gallery/Gallery";
 import Header from "../Header/Header";
+import InspirationVideos from "../InspirationVideos/InspirationVideos";
 import Pricing from "../Pricing/Pricing";
 import RecentEvents from "../RecentEvents/RecentEvents";
 import Services from "../Services/Services";
@@ -18,6 +19,7 @@ const Home = () => {
             <Pricing />
             <Testimonials />
             <RecentEvents />
+            <InspirationVideos />
         </section>
     );
 };
