@@ -21,6 +21,10 @@ const Navbar = () => {
             {
                 "logo-style": isActive
             })}>Contact</NavLink>
+        <NavLink to="/admin/dashboard" className={({ isActive }) => cn('text-neutral font-semibold',
+            {
+                "logo-style": isActive
+            })}>Dashboard</NavLink>
 
         <button className="btn-primary">Sign In <LogInIcon className="h-6 w-6" /></button>
 
