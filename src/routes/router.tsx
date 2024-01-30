@@ -5,11 +5,13 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import ManageRecentEvents from "../pages/Dashboard/ManageRecetEvents";
 import ManageEventItems from "../pages/Dashboard/ManageEventItems/ManageEventItems";
 import DashboardHome from "../pages/Dashboard/DashboardHome";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
@@ -20,6 +22,7 @@ const router = createBrowserRouter([
     {
         path: "/admin",
         element: <Dashboard />,
+        errorElement: <ErrorPage />,
         children: [
             {
 
