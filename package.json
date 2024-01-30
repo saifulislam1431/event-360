@@ -34,9 +34,7 @@
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.10.4",
     "swiper": "^11.0.5",
-    "tailwind-merge": "^2.2.1",
-    "videojs-playlist": "^5.1.0",
-    "videojs-youtube": "^3.0.1"
+    "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

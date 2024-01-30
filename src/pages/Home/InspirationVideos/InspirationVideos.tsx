@@ -47,8 +47,8 @@ const InspirationVideos = () => {
                 <Carousel className='text-center' autoPlay={true} infiniteLoop={true} showThumbs={false} stopOnHover={true}>
                     {
                         links?.map((video: TVideo) =>
-                            <div className='w-full h-[280px] lg:h-[400px]'>
-                                <ReactPlayer url={video?.link} width="100%" height="100%" />
+                            <div className='w-full h-[300px] lg:h-[400px]'>
+                                <ReactPlayer url={video?.link} width="100%" height="100%" controls={true} />
                             </div>)
                     }
 
