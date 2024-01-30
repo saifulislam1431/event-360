@@ -3,9 +3,8 @@
 # Event 360 - Event Management Platform
 
 
-<div align="center">
  ![Event 360 Banner](./banner.png)
-</div>
+
 
 <!-- TABLE OF CONTENTS -->
 
