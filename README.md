@@ -3,7 +3,9 @@
 # Event 360 - Event Management Platform
 
 
- ![Event 360 Banner](./banner.png)
+<div align="center">
+  <img src="./banner.png" alt="Event 360 Banner" />
+</div>
 
 
 <!-- TABLE OF CONTENTS -->
