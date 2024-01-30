@@ -1,6 +1,8 @@
 <!-- Please update value in the {}  -->
 
-# Event 360 - Frontend
+# Event 360 - Event Management Platform
+
+![Event 360 Banner](./banner.png)
 
 
 <div align="center">
