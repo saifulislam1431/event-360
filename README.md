@@ -96,6 +96,19 @@ Event 360 is a modern and dynamic frontend application designed to provide an im
    - **Update:** Modify event details to keep information accurate.
    - **Delete:** Remove outdated or unnecessary events from the platform.
 
+## Getting Started
+
+### 1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/event-360-frontend.git
+
+### 2. Install dependencies:
+   - cd event-360-frontend
+   - npm install
+
+### 3. Start the site:
+    - npm run dev
+    - Open your browser and navigate to: http://localhost:5173
 
 
 ## Contact
