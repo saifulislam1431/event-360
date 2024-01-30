@@ -6,7 +6,7 @@ const useGetServices = () => {
     const { data: allServices = [], refetch, isError, isLoading } = useQuery({
         queryKey: ["all-service"],
         queryFn: async () => {
-            const response = await axios.get("http://localhost:5000/all-services");
+            const response = await axios.get("https://event360-backend.vercel.app/all-services");
             return response.data
         }
     })

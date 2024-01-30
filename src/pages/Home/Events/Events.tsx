@@ -18,7 +18,7 @@ const Events = () => {
 
             <div className="mt-16 grid grid-cols-12 gap-7 items-center justify-items-center">
                 {
-                    allEvents?.map((event: TEvents, index: number) => <Event key={event?._id as string} event={event} isFirstRow={index < 2} />)
+                    allEvents?.map((event: TEvents, index: number) => <Event key={event?._id as string} event={event} isFirstRow={index < 2} index={index} />)
                 }
             </div>
         </section>

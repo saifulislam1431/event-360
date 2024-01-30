@@ -12,12 +12,17 @@ const ManageEventItems = () => {
     const { allEvents } = useGetEvents();
     const queryClient = useQueryClient();
 
-    const { mutateAsync, isSuccess } = useMutation({
+    const { mutateAsync } = useMutation({
         mutationFn: async (id) => {
-            await axios.delete(`http://localhost:5000/api/v1/delete-events/${id}`)
+            await axios.delete(`https://event360-backend.vercel.app/api/v1/delete-events/${id}`)
         },
         onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['all-events'] })
+            queryClient.invalidateQueries({ queryKey: ['all-events'] });
+            Swal.fire({
+                title: "Deleted!",
+                text: "Your event has been deleted.",
+                icon: "success"
+            });
         }
     })
 
@@ -33,16 +38,6 @@ const ManageEventItems = () => {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 await mutateAsync(id);
-                console.log(isSuccess);
-
-                if (isSuccess) {
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: "Your event has been deleted.",
-                        icon: "success"
-                    });
-                }
-
             }
         });
 

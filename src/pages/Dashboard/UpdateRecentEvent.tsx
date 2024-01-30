@@ -24,12 +24,19 @@ const UpdateRecentEvent = ({ event }: { event: TRecentEvent }) => {
 
     const queryClient = useQueryClient();
 
-    const { mutateAsync, isSuccess, isError } = useMutation({
+    const { mutateAsync } = useMutation({
         mutationFn: async (data: TFormDataType) => {
-            return await axios.patch(`http://localhost:5000/api/v1/update-recent-events/${event?._id}`, data)
+            return await axios.patch(`https://event360-backend.vercel.app/api/v1/update-recent-events/${event?._id}`, data)
         },
         onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['all-recent-events'] })
+            queryClient.invalidateQueries({ queryKey: ['all-recent-events'] });
+            Swal.fire({
+                title: 'Updated!',
+                text: 'Item Updated!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
+            reset();
         }
     })
 
@@ -52,18 +59,6 @@ const UpdateRecentEvent = ({ event }: { event: TRecentEvent }) => {
                             image: ResData?.data?.display_url,
                         }
                         await mutateAsync(newData);
-                        if (isSuccess) {
-                            Swal.fire({
-                                title: 'Updated!',
-                                text: 'Item Updated!',
-                                icon: 'success',
-                                confirmButtonText: 'Cool'
-                            })
-                            reset();
-                        } else {
-                            console.log(isError);
-
-                        }
                     }
                 })
         } else {
@@ -73,48 +68,7 @@ const UpdateRecentEvent = ({ event }: { event: TRecentEvent }) => {
                 image: event?.image,
             }
             await mutateAsync(newData);
-            if (isSuccess) {
-                Swal.fire({
-                    title: 'Updated!',
-                    text: 'Item Updated!',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
-                reset();
-            } else {
-                console.log(isError);
-
-            }
         }
-        // console.log(data);
-
-        // fetch(hosting_url, {
-        //     method: "POST",
-        //     body: formData
-        // })
-        //     .then(res => res.json())
-        //     .then(async (ResData) => {
-        //         if (ResData) {
-        //             const newData = {
-        //                 event_name: data?.event_name,
-        //                 organizer_name: data?.organizer_name,
-        //                 image: ResData?.data?.display_url || event?.image,
-        //             }
-        //             await mutateAsync(newData);
-        //             if (isSuccess) {
-        //                 Swal.fire({
-        //                     title: 'Updated!',
-        //                     text: 'Item Updated!',
-        //                     icon: 'success',
-        //                     confirmButtonText: 'Cool'
-        //                 })
-        //                 reset();
-        //             } else {
-        //                 console.log(isError);
-
-        //             }
-        //         }
-        //     })
     }
 
 

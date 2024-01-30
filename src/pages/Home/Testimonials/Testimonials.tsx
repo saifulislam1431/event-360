@@ -24,19 +24,11 @@ const Testimonials = () => {
 
                 <div className="hidden lg:flex">
                     <Swiper
-                        effect={'coverflow'}
                         grabCursor={true}
                         loop={true}
                         centeredSlides={true}
                         slidesPerView={'auto'}
-                        coverflowEffect={{
-                            rotate: 50,
-                            stretch: 0,
-                            depth: 100,
-                            modifier: 1,
-                            slideShadows: true,
-                        }}
-                        autoplay={false}
+                        autoplay={true}
                         pagination={true}
                         navigation={true}
                         modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}

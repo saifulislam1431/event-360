@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TRecentEvent } from "./recentEvent.type";
 import RecentEvent from "./RecentEvent";
-import useScrollFadeUp from "../../../hooks/useScrollfadeUp";
 import { motion } from "framer-motion"
+import useScrollFadeUp from "../../../hooks/useScrollFadeUp";
 
 const RecentEvents = () => {
     const { recentEvents } = useGetRecentEvent();

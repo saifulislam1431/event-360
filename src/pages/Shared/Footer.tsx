@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, ArrowUpCircle, Euro, Globe } from "lucide-react";
+import { ArrowRight, ArrowUpCircle, Euro, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {

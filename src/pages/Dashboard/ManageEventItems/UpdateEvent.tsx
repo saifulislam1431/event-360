@@ -22,12 +22,19 @@ const UpdateEvent = ({ event }: { event: TEvents }) => {
 
     const queryClient = useQueryClient();
 
-    const { mutateAsync, isSuccess, isError } = useMutation({
+    const { mutateAsync } = useMutation({
         mutationFn: async (data: TFormDataType) => {
-            return await axios.patch(`http://localhost:5000/api/v1/update-events/${event?._id}`, data)
+            return await axios.patch(`https://event360-backend.vercel.app/api/v1/update-events/${event?._id}`, data)
         },
         onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['all-events'] })
+            queryClient.invalidateQueries({ queryKey: ['all-events'] });
+            Swal.fire({
+                title: 'Updated!',
+                text: 'Item Updated!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
+            reset();
         }
     })
 
@@ -49,20 +56,6 @@ const UpdateEvent = ({ event }: { event: TEvents }) => {
                             image: ResData?.data?.display_url,
                         }
                         await mutateAsync(newData);
-                        console.log(isSuccess);
-
-                        if (isSuccess) {
-                            Swal.fire({
-                                title: 'Updated!',
-                                text: 'Item Updated!',
-                                icon: 'success',
-                                confirmButtonText: 'Cool'
-                            })
-                            reset();
-                        } else {
-                            console.log(isError);
-
-                        }
                     }
                 })
         } else {
@@ -71,20 +64,6 @@ const UpdateEvent = ({ event }: { event: TEvents }) => {
                 image: event?.image,
             }
             await mutateAsync(newData);
-            console.log(isSuccess);
-
-            if (isSuccess) {
-                Swal.fire({
-                    title: 'Updated!',
-                    text: 'Item Updated!',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
-                reset();
-            } else {
-                console.log(isError);
-
-            }
         }
     }
 

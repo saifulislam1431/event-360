@@ -21,12 +21,19 @@ const AddNewRecentItems = () => {
 
     const queryClient = useQueryClient();
 
-    const { mutateAsync, isSuccess, isError } = useMutation({
+    const { mutateAsync } = useMutation({
         mutationFn: async (data: TFormDataType) => {
-            return await axios.post("http://localhost:5000/api/v1/post-new-recent-events", data)
+            return await axios.post("https://event360-backend.vercel.app/api/v1/post-new-recent-events", data)
         },
         onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['all-recent-events'] })
+            queryClient.invalidateQueries({ queryKey: ['all-recent-events'] });
+            Swal.fire({
+                title: 'Success!',
+                text: 'One recent item added!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
+            reset();
         }
     })
 
@@ -50,20 +57,6 @@ const AddNewRecentItems = () => {
                         image: ResData?.data.display_url,
                     }
                     await mutateAsync(newData);
-                    console.log(isSuccess);
-                    if (isSuccess) {
-                        // console.log(isSuccess);
-                        Swal.fire({
-                            title: 'Success!',
-                            text: 'One recent item added!',
-                            icon: 'success',
-                            confirmButtonText: 'Cool'
-                        })
-                        reset();
-                    } else {
-                        console.log(isError);
-
-                    }
                 }
             })
     }

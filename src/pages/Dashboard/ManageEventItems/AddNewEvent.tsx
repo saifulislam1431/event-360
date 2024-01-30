@@ -20,12 +20,19 @@ const AddNewEvent = () => {
 
     const queryClient = useQueryClient();
 
-    const { mutateAsync, isSuccess, isError } = useMutation({
+    const { mutateAsync } = useMutation({
         mutationFn: async (data: TFormDataType) => {
-            return await axios.post("http://localhost:5000/api/v1/add-events", data)
+            return await axios.post("https://event360-backend.vercel.app/api/v1/add-events", data)
         },
         onSuccess: () => {
-            queryClient.invalidateQueries({ queryKey: ['all-events'] })
+            queryClient.invalidateQueries({ queryKey: ['all-events'] });
+            Swal.fire({
+                title: 'Success!',
+                text: 'Event added!',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
+            reset();
         }
     })
 
@@ -48,20 +55,6 @@ const AddNewEvent = () => {
                         image: ResData?.data.display_url,
                     }
                     await mutateAsync(newData);
-                    console.log(isSuccess);
-
-                    if (isSuccess) {
-                        // console.log(isSuccess);
-                        Swal.fire({
-                            title: 'Success!',
-                            text: 'Event added!',
-                            icon: 'success',
-                            confirmButtonText: 'Cool'
-                        })
-                        reset();
-                    } else {
-                        console.log(isError);
-                    }
                 }
             })
     }

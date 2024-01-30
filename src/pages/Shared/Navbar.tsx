@@ -1,12 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
 import cn from "../../utils/cn";
 import { LogInIcon, MoonIcon, SunIcon } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "lightThem")
     const [isOpen, setIsOpen] = useState(false);
+
+    const handleToggle = (value: string) => {
+        if (value === "night") {
+            setTheme("night")
+        } else {
+            setTheme("mytheme")
+        }
+    }
 
     const navLinks = <>
         <NavLink to="/" className={({ isActive }) => cn('text-neutral font-semibold',
@@ -34,11 +42,11 @@ const Navbar = () => {
             <input type="checkbox" />
 
             {/* sun icon */}
-            <SunIcon className="swap-on fill-yellow-400 stroke-yellow-500 w-7 h-7" />
+            <SunIcon className="swap-on fill-yellow-400 stroke-yellow-500 w-7 h-7" onClick={() => handleToggle("night")} />
 
 
             {/* moon icon */}
-            <MoonIcon className="swap-off fill-gray-300 stroke-gray-400 w-7 h-7" />
+            <MoonIcon className="swap-off fill-gray-300 stroke-gray-400 w-7 h-7" onClick={() => handleToggle("mytheme")} />
 
         </label>
     </>
@@ -68,6 +76,12 @@ const Navbar = () => {
             }
         }
     }
+
+    useEffect(() => {
+        localStorage.setItem("theme", theme as string);
+        const localTheme = localStorage.getItem("theme");
+        document.querySelector("html")?.setAttribute("data-theme", localTheme as string)
+    }, [theme])
 
     return (
         <header className="h-16 sticky top-0">
