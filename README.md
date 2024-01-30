@@ -2,15 +2,9 @@
 
 # Event 360 - Event Management Platform
 
-![Event 360 Banner](./banner.png)
-
 
 <div align="center">
-  <h3>
-    <a href="https://event-360-4b848.web.app/">
-      Demo
-    </a>
-  </h3>
+ ![Event 360 Banner](./banner.png)
 </div>
 
 <!-- TABLE OF CONTENTS -->
